@@ -1,20 +1,20 @@
 import java.lang.Math;
 import java.math.BigInteger;
+import java.util.Arrays;
 
-public class Homework_1{
+public class Homework1{
     public static void main(String[] args){
         //convert(74);
-        //normalize(-30);
-        //max(3, 5, 4);
+        //System.out.println(Integer.toString(normalize(-30)));
+        //System.out.println(Integer.toString(max(3, 6, 2)));
         //System.out.println(fact(4));
         //BigInteger forTask5 = new BigInteger("3"); // переменная для тестирования Task5()
-        //System.out.println(FactForBigInteger(forTask5));
+        //System.out.println(factForBigInteger(forTask5));
         //multiplTable();
-        //average(5, 6, 7, 8);
-        //average(5, 6, 7, 8);
+        //System.out.println(Double.toString(average(5, 6, 7, 8)));
         //System.out.println(isMagicSquare(new int[][]{{16, 3, 2, 13}, {5, 10, 11, 8}, {9, 6, 7, 12}, {4, 15, 14, 1}}));
         //System.out.println(Arrays.toString(reverse(new int[]{1, 2, 3})));
-        //System.out.println(Arrays.toString(sort(new int[]{3, 1, 2, -1, -5})));
+        System.out.println(Arrays.toString(sort(new int[]{3, 1, 2, -1, -5})));
         //System.out.println(Arrays.toString(removeExtra(new int[]{2, 1, 45, 2, 34, 1, 12, 2}, 2)));
     }
     //Task1
@@ -33,19 +33,12 @@ public class Homework_1{
         System.out.println(translate(x, 16));
     }
     //Task2
-    public static void normalize(int x){
-        System.out.println(Math.floorMod(x, 360));
+    public static int normalize(int x){
+        return Math.floorMod(x, 360);
     }
     //Task3
-    public static void max(int a, int b, int c){
-        int[] arr = {a, b, c};
-        int max = arr[0];
-        for (int i = 0; i < 3; ++i){
-            if (max < arr[i]){
-                max = arr[i];
-        System.out.println(max);
-            }
-        }
+    public static int max(int a, int b, int c){
+        return Math.max(Math.max(a, b), c);
     }
     //Task4
     public static int fact(int x){
@@ -55,11 +48,11 @@ public class Homework_1{
         return 1;
     }
     //Task5
-    public static BigInteger FactForBigInteger(BigInteger x){
+    public static BigInteger factForBigInteger(BigInteger x){
         int z = x.compareTo(BigInteger.ONE);
         if (z == 1){
             BigInteger a = x.subtract(BigInteger.ONE);
-            return x.multiply(FactForBigInteger(a));
+            return x.multiply(factForBigInteger(a));
         }
         return BigInteger.ONE;
     }
@@ -75,13 +68,12 @@ public class Homework_1{
         }
     }
     //Task7
-    public static void average(int ... array) {
+    public static double average(int ... array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
         }
-        float sum1 = (float) sum;
-        System.out.println(sum1 / array.length);
+        return sum * 1.0 / array.length;
     }
     // Task 8
     static boolean isMagicSquare(int[][] square) {
@@ -136,25 +128,25 @@ public class Homework_1{
     static int[] sort(int[] arr) {
         int len = arr.length;
         int[] sorted = new int[len];
-        int minim = arr[0];
+        int maxim = arr[0];
         for (int i = 0; i < len; i++){
-            if (minim > arr[i]){
-                minim = arr[i];
+            if (maxim < arr[i]){
+                maxim = arr[i];
             }
         }
         for (int i = 0; i < len; i++){
-            int max = arr[0];
+            int min = arr[0];
             int index = 0;
             for (int j = 0; j < len; j++){
-                if (arr[j] > max){
-                    max = arr[j];
+                if (arr[j] < min){
+                    min = arr[j];
                     index = j;
                 }
             }
-            arr[index] = minim;
-            sorted[i] = max;
+            arr[index] = maxim;
+            sorted[i] = min;
         }
-        return reverse(sorted);
+        return sorted;
     }
 
 
