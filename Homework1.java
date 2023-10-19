@@ -14,7 +14,7 @@ public class Homework1{
         //System.out.println(Double.toString(average(5, 6, 7, 8)));
         //System.out.println(isMagicSquare(new int[][]{{16, 3, 2, 13}, {5, 10, 11, 8}, {9, 6, 7, 12}, {4, 15, 14, 1}}));
         //System.out.println(Arrays.toString(reverse(new int[]{1, 2, 3})));
-        System.out.println(Arrays.toString(sort(new int[]{3, 1, 2, -1, -5})));
+        //System.out.println(Arrays.toString(sort(new int[]{3, 1, 2, -1, -5})));
         //System.out.println(Arrays.toString(removeExtra(new int[]{2, 1, 45, 2, 34, 1, 12, 2}, 2)));
     }
     //Task1
