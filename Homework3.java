@@ -69,12 +69,12 @@ public class Homework3 {
             System.out.println("Указатель не может указывать на null!");
         }*/
         //Task 9
-        try {
+        /*try {
             int[] m = new int[2];
             m[8] = 5;
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("Массив выходит за пределы своего размера!");
-        }
+        }*/
     }
 
     public static boolean registration(String login, String password, String confirmPassword) {
