@@ -31,6 +31,21 @@ public class Homework3 {
         printer = (x, y) -> System.out.printf("В том бою, в русской армии было %s солдат и %s орудий", x, y);
         
         printer.print(6500, 56);*/
-        
+        //Task 4
+        /*Signum signum = x -> {
+            if (x > 0) {
+                System.out.println("Положительное число");
+            }
+            if (x == 0) {
+                System.out.println("Ноль");
+            }
+            if (x < 0) {
+                System.out.println("Отрицательное число");
+            }
+        };
+        signum.sign(-5);
+        signum.sign(0);
+        signum.sign(5);*/
     }
 }
+
