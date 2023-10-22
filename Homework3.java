@@ -53,6 +53,14 @@ public class Homework3 {
         String password = "Student_of_MIPT2023";
         String confirmPassword = "Student_of_MIPT2023";
         System.out.println(Homework3.registration(login, password, confirmPassword));*/
+        //Task 6
+        //Смотри Check 1
+        //Task 7
+        try {
+            int a = 42 / 0;
+        } catch(ArithmeticException e) {
+            System.out.println("Divizion by zero");
+        }
     }
 
     public static boolean registration(String login, String password, String confirmPassword) {
