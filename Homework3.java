@@ -56,10 +56,24 @@ public class Homework3 {
         //Task 6
         //Смотри Check 1
         //Task 7
-        try {
+        /*try {
             int a = 42 / 0;
         } catch(ArithmeticException e) {
             System.out.println("Divizion by zero");
+        }*/
+        //Task 8
+        /*try {
+            String s = null;
+            String m = s.toLowerCase();
+        } catch(NullPointerException e) {
+            System.out.println("Указатель не может указывать на null!");
+        }*/
+        //Task 9
+        try {
+            int[] m = new int[2];
+            m[8] = 5;
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println("Массив выходит за пределы своего размера!");
         }
     }
 
