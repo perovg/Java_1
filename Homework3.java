@@ -26,5 +26,11 @@ public class Homework3 {
         System.out.println(label.type);*/
         /*String text = "You are very bad person :(. You not want to win some dollars!";
         System.out.println(Test.checkLabels(text, "TooLongTextAnalizer", "NegativeAnalizer", "SpamAnalizer"));*/
+        //Task 3
+        /*Printable printer;
+        printer = (x, y) -> System.out.printf("В том бою, в русской армии было %s солдат и %s орудий", x, y);
+        
+        printer.print(6500, 56);*/
+        
     }
 }
