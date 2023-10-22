@@ -1,4 +1,6 @@
 //import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Homework3 {
     public static void main(String[] args) {
@@ -46,6 +48,30 @@ public class Homework3 {
         signum.sign(-5);
         signum.sign(0);
         signum.sign(5);*/
+        //Task 5
+        /*String login = "Grigory Perov";
+        String password = "Student_of_MIPT2023";
+        String confirmPassword = "Student_of_MIPT2023";
+        System.out.println(Homework3.registration(login, password, confirmPassword));*/
     }
+
+    public static boolean registration(String login, String password, String confirmPassword) {
+        try {
+            if (login.length() >= 20) {
+                throw new WrongLoginException();
+            }
+            String regex = "^[a-zA-Z0-9_]+$";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(password);
+            if (password.length() >= 20 || matcher.matches() == false || password.equals(confirmPassword) == false) {
+                throw new WrongPasswordException();
+            }
+        } catch(WrongLoginException e) {
+            return false;
+        } catch(WrongPasswordException e) {
+            return false;
+        }
+        return true;
+    };
 }
 
