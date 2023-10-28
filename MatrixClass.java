@@ -5,6 +5,10 @@ public class MatrixClass <T> implements MatrixInterface<T> {
         this.matrix = matrix;
     }
 
+    public MatrixClass(int x, int y) {
+        this.matrix = new T[x][y];
+    }
+
     public void append(T el, int x, int y) {
         this.matrix[x][y] = el;
     }
