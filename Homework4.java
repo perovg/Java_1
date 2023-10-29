@@ -23,6 +23,29 @@ public class Homework4 {
         System.out.println(pair.max());
         System.out.println(pair.min());*/
         //Task 4
+        Integer[] a = {4, 15, 8, 11, 3, 7, 21};
+        Pair<Integer> pair = minMax(a);
+        System.out.println(pair.min());
+        System.out.println(pair.max());
+        System.out.println(pair.getLeft());
+        System.out.println(pair.getRight());
+    }
 
+    public static <T extends Comparable<T>> Pair<T> minMax(T[] a) {
+        if (a.length == 0) {
+            return null;
+        } else {
+            T min = a[0];
+            T max = a[0];
+            for (T el : a) {
+                if (el.compareTo(min) < 0) {
+                    min = el;
+                }
+                if (el.compareTo(max) > 0) {
+                    max = el;
+                }
+            }
+            return new Pair<>(min, max);
+        }
     }
 }
